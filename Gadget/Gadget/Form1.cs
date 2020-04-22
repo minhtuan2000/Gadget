@@ -263,30 +263,6 @@ namespace Gadget
             }
         }
 
-        private void checkBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                Process.Start(@"E:\Movies\screensaver.mp4");
-            }
-            catch
-            {
-                
-            }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start(@"E:\Movies\screensaver.mp4");
-            }
-            catch
-            {
-
-            }
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             try
