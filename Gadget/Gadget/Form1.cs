@@ -39,17 +39,17 @@ namespace Gadget
         //}
 
 
-        public Color settingColor { get; set; } = Color.White;
+        private Color settingColor { get; set; } = Color.White;
         public Dictionary<string, Queue<long>> watchingList { get; set; } = new Dictionary<string, Queue<long>>();
 
         private string key = "72482b322c07cfce3f3de7cd5049512b";
 
         Setting settingForm;
 
-        double coor_x = 48.71049, coor_y = 2.21409;
-        string city = "London";
-        double temperature, humidity;
-        string weather;
+        private double coor_x = 48.71049, coor_y = 2.21409;
+        private string city = "London";
+        private double temperature, humidity;
+        private string weather;
 
         int processID;
 
@@ -57,10 +57,52 @@ namespace Gadget
         {
             InitializeComponent();
 
+            GetColor();
             GetWatchList();
             processID = Process.GetCurrentProcess().Id;
         }
 
+        public void ChangeColor(Color newColor)
+        {
+            settingColor = newColor;
+
+            try
+            {
+                //Pass the filepath and filename to the StreamWriter Constructor
+                StreamWriter sw = new StreamWriter("PreferredColor.txt");
+
+                String strColor = ColorTranslator.ToHtml(settingColor);
+                sw.WriteLine(strColor);
+
+                //Close the file
+                sw.Close();
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Exception: {0}", err.Message);
+            }
+        }
+
+        public void GetColor()
+        {
+            try
+            {
+                //Pass the file path and file name to the StreamReader constructor
+                StreamReader sr = new StreamReader("PreferredColor.txt");
+
+                //Read the first line of text
+                String strColor = sr.ReadLine();
+                settingColor = ColorTranslator.FromHtml(strColor);
+
+                //close the file
+                sr.Close();
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Exception: {0}", err.Message);
+            }
+        }
+        
         private void GetWatchList()
         {
             String line, key = "";

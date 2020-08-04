@@ -64,7 +64,7 @@ namespace Gadget
 
             if (colorDlg.ShowDialog() == DialogResult.OK)
             {
-                CallingForm.settingColor = colorDlg.Color;
+                CallingForm.ChangeColor(colorDlg.Color);
             }
         }
 
@@ -74,9 +74,19 @@ namespace Gadget
             comboBox1.Items.Clear();
 
             Process[] allProcesses = Process.GetProcesses();
+            List<String> allProcessesName = new List<string>();
             foreach (Process process in allProcesses)
             {
-                comboBox1.Items.Add(process.ProcessName);
+                if (!allProcessesName.Contains(process.ProcessName))
+                {
+                    allProcessesName.Add(process.ProcessName);
+                }
+            }
+
+            allProcessesName.Sort();
+            foreach (String processName in allProcessesName)
+            {
+                comboBox1.Items.Add(processName);
             }
         }
 
