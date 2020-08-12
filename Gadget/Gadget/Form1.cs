@@ -404,7 +404,15 @@ namespace Gadget
                     Console.WriteLine("Exception: {0}", err.Message);
                 }
 
-                button1.ForeColor = settingColor;
+                try
+                {
+                    button1.Text = "⚙";
+                    button1.ForeColor = settingColor;
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine("Exception: {0}", err.Message);
+                }
             }
             catch (Exception err)
             {

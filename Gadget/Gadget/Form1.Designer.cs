@@ -90,7 +90,6 @@
             this.button1.Size = new System.Drawing.Size(36, 39);
             this.button1.TabIndex = 9;
             this.button1.TabStop = false;
-            this.button1.Text = "⚙";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -101,9 +100,8 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(963, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 39);
+            this.label6.Size = new System.Drawing.Size(0, 39);
             this.label6.TabIndex = 7;
-            this.label6.Text = "C";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label5
@@ -115,7 +113,6 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(747, 61);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Weather";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
@@ -126,7 +123,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(311, 74);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Temp";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
@@ -137,7 +133,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(365, 61);
             this.label2.TabIndex = 4;
-            this.label2.Text = "City";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label1
@@ -148,7 +143,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(744, 81);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Time";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
@@ -157,11 +151,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Right;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(881, 0);
+            this.label4.Location = new System.Drawing.Point(1019, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 61);
+            this.label4.Size = new System.Drawing.Size(0, 61);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Date";
             // 
             // timer1
             // 
